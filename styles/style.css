@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #cccbcb;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 10px auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: -1px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+.content img {
+  width: 100%;
+  height: auto;
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.3rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.container {
+  margin: 10px auto;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background-color: #ebe9e9;
+  border-radius: 15px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: -1px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+}
+.container .description {
+  margin-bottom: 2rem;
+}
+.optionContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.optionCard {
+  display: inline-block;
+  width: 30%;
+  height: 100%;
+  margin: 10px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: -1px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+.dishPrice {
+  font-size: 1.3rem;
+  color: #149c02;
+}
+
+.personalData {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.personalData input {
+  display: block;
+  width: 100%;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2rem;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #02789c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
