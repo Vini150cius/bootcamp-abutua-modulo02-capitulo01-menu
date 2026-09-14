@@ -1,11 +1,40 @@
 function calc() {
-
     var quantities = document.getElementsByName("quantity");
     var output = document.getElementById("output");
+    var nameClient = document.getElementById("inputName").value;
+
+    var totalGeral = 0;
+    var listOrder = "";
 
     for (var input of quantities) {
-        output.innerHTML += `Id do Elemento = ${input.id} - Value do Elemento ${input.value} </br>`;
+        var quantity = parseInt(input.value);
+
+        if (quantity > 0) {
+            var card = input.closest(".optionCard");
+            var titulo = card.querySelector(".dishTitle").innerText;
+            var textPrice = card.querySelector(".dishPrice").innerText;
+
+            var priceUnit = parseFloat(textPrice.replace("R$ ", "").replace(",", "."));
+            var totalItem = priceUnit * quantity;
+            totalGeral += totalItem;
+
+            listOrder += `<li>Prato: ${titulo} - Preço unitário: R$ ${priceUnit} - Quantidade: ${quantity} - Total: R$ ${totalItem}.</li>`;
+        }
     }
+    var name = nameClient !== "" ? nameClient : "Cliente";
+
+    output.innerHTML = `
+      <p>Caro <strong>${name}</strong></p>
+      <br>
+      <p>Seguem os dados do seu pedido.</p>
+      <br>
+      <p>O seu pedido é:</p>
+      <ul>
+        ${listOrder}
+      </ul>
+      <br>
+      <h3>Preço final R$ ${totalGeral}</h3>
+    `;
 }
 
 function wcqib_refresh_quantity_increments() {

@@ -101,68 +101,81 @@ button {
   cursor: pointer;
 }
 
-/* -- quantity box -- */
-
 .quantity {
-    display: flex;
-    flex-direction: row;
-    justify-content: center
-    
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .quantity .input-text.qty {
-    width: 35px;
-    height: 39px;
-    padding: 0 5px;
-    text-align: center;
-    background-color: transparent;
-    border: 1px solid #efefef;
+  width: 35px;
+  height: 39px;
+  padding: 0 5px;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid #efefef;
 }
 
 .quantity.buttons_added {
-    text-align: left;
-    position: relative;
-    white-space: nowrap;
-    vertical-align: top;
+  text-align: left;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: top;
 }
 
 .quantity.buttons_added input {
-    display: inline-block;
-    margin: 0;
-    vertical-align: top;
-    box-shadow: none;
+  display: inline-block;
+  margin: 0;
+  vertical-align: top;
+  box-shadow: none;
 }
 
 .quantity.buttons_added .minus,
 .quantity.buttons_added .plus {
-    padding: 7px 10px 8px;
-    height: 41px;
-    background-color: #ffffff;
-    border: 1px solid #efefef;
-    cursor: pointer;
+  padding: 7px 10px 8px;
+  height: 41px;
+  background-color: #ffffff;
+  border: 1px solid #efefef;
+  cursor: pointer;
 }
 
 .quantity.buttons_added .minus {
-    border-right: 0;
+  border-right: 0;
 }
 
 .quantity.buttons_added .plus {
-    border-left: 0;
+  border-left: 0;
 }
 
 .quantity.buttons_added .minus:hover,
 .quantity.buttons_added .plus:hover {
-    background: #eeeeee;
+  background: #eeeeee;
 }
 
 .quantity input::-webkit-outer-spin-button,
 .quantity input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0;
 }
 
 .quantity.buttons_added .minus:focus,
 .quantity.buttons_added .plus:focus {
-    outline: none;
+  outline: none;
+}
+
+.output {
+  margin: 2rem 0;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.output li {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  margin-left: 1.5rem;
+}
+
+.output h3 {
+  font-size: 1.5rem;
 }
