@@ -2,6 +2,10 @@ function calc() {
     var quantities = document.getElementsByName("quantity");
     var output = document.getElementById("output");
     var nameClient = document.getElementById("inputName").value;
+    var formatter = new Intl.NumberFormat('pt-BR', {
+        style: 'currency',
+        currency: 'BRL',
+    });
 
     var totalGeral = 0;
     var listOrder = "";
@@ -18,7 +22,7 @@ function calc() {
             var totalItem = priceUnit * quantity;
             totalGeral += totalItem;
 
-            listOrder += `<li>Prato: ${titulo} - Preço unitário: R$ ${priceUnit} - Quantidade: ${quantity} - Total: R$ ${totalItem}.</li>`;
+            listOrder += `<li>Prato: ${titulo} - Preço unitário: ${formatter.format(priceUnit)} - Quantidade: ${quantity} - Total: ${formatter.format(totalItem)}.</li>`;
         }
     }
     var name = nameClient !== "" ? nameClient : "Cliente";
@@ -33,7 +37,7 @@ function calc() {
         ${listOrder}
       </ul>
       <br>
-      <h3>Preço final R$ ${totalGeral}</h3>
+      <h3>Preço final ${formatter.format(totalGeral)}</h3>
     `;
 }
 
